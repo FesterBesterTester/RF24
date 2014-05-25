@@ -49,7 +49,7 @@ extern HardwareSPI SPI;
 // Progmem is Arduino-specific
 #ifdef ARDUINO
 #include <avr/pgmspace.h>
-#define PRIPSTR "%S"
+#define PRIPSTR "S"
 #else
 typedef char const char;
 typedef uint16_t prog_uint16_t;
@@ -58,7 +58,7 @@ typedef uint16_t prog_uint16_t;
 #define strlen_P strlen
 #define PROGMEM
 #define pgm_read_word(p) (*(p)) 
-#define PRIPSTR "%s"
+#define PRIPSTR "s"
 #endif
 
 #endif // __RF24_CONFIG_H__
